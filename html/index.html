@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Home without sidebar</title>
+    <title>Home</title>
     <!-- Bootstrap 4-->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- Font Awesome -->
@@ -13,54 +13,43 @@
     body,
     html {
         height: 100%;
+        min-height: 100%;
     }
 
     .main {
-    	margin: 0px;
-    	padding: 0px;
-        float: left;
-        width: 1110px;
+        position: relative;
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
         height: 100%;
-    }
-
-    .nav {
-        width: 208px;
-        border: 0 solid #fff;
-        background: #000;
-        float: left;
-        height: 100%;
+        min-height: 100%;
+        background: url(../images/mian-bg2.gif) repeat;
+        clear: both;
     }
 
     .logo {
         padding: 0;
     }
 
-    .nav-link {
+    .content {
+        height: 100%;
+        float: left;
+        color: #fff;
         text-align: center;
-        padding: 0.1rem 0.1rem;
+        width: 100%;
     }
 
-    .item-first {
-        padding-top: 0;
-        margin-top: 0;
+    .settings {
+        width: 750px;
+        margin: 50px auto;
+        /*min-height: 100%;*/
     }
 
-    .item-bottom {
-        margin-top: 25px;
+    .header {
+        text-align: left;
+        width: 100%;
+        /*margin-left: 210px;*/
     }
-
-    .item-language {
-    	margin-top: 10px;
-    }
-
-    .item-language>a {
-        color: #00B37F;
-        margin: 0 15px;
-    }
-
-    /*.nav>li {
-        margin-bottom: 20px;
-    }*/
 
     .header,
     .header .btn {
@@ -77,79 +66,115 @@
         color: red;
     }
 
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    .item-icon {
+        display: inline-block;
+        color: #fff;
+        border: 0px solid #333;
+        background: #333;
+        /*padding: 25px;*/
+    }
+
+    .menu {
+        float: left;
+        width: 208px;
+        background: #000;
+        min-height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
     .col-2 {
-        border: 1px solid #333333;
+        border: 1px solid #000;
         background-color: #333333;
         color: #fff;
         margin: 1rem;
-        padding: 0.9rem;
+        padding: 1rem;
     }
 
-    .container-fluid {
-        background: url(../images/mian-bg2.gif) repeat;
-        height: 93.8%;
-        color: #fff;
+    .menu-one>.nav-link {
         text-align: center;
-        width: 100%;
+        padding: 0.1rem 0.1rem;
     }
 
-    h1 {
-        font-size: 3.5rem;
+    .item-first {
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    .item-bottom {
+        margin-top: 25px;
+    }
+
+    .item-language {
+        margin-top: 10px;
+        margin-bottom: 100px;
+    }
+
+    .item-language>a {
+        color: #00B37F;
+        margin: 0 15px;
     }
     </style>
 </head>
 
 <body>
-    <nav class="nav flex-column">
-        <a class="nav-link logo" href="#!"><img src="../images/navi_logo.gif" alt=""></a>
-        <a class="nav-link logo" href="#!"><img src="../images/login.gif" alt=""></a>
-        <a class="nav-link item-first" href="#!"><img src="../images/schedule.gif" alt=""></a>
-        <a class="nav-link item-top" href="#!"><img src="../images/reserve.gif" alt=""></a>
-        <a class="nav-link item-top" href="#!"><img src="../images/setup.gif" alt=""></a>
-        <a class="nav-link item-top" href="#!"><img src="../images/room.gif" alt=""></a>
-        <a class="nav-link item-top" href="#!"><img src="../images/manual_icon_white.gif" alt=""></a>
-        <a class="nav-link item-bottom" href="#!"><img src="../images/top1.gif" alt=""></a>
-        <a class="nav-link item-logout" href="#!"><img src="../images/logout.gif" alt=""></a>
-        <li class="nav-link item-language" href="#!"><a href="#!">EN</a><a href="#!">JP</a></li>
-        <!-- <li class="nav-link item-language" href="#!"><a>JP</a></li> -->
-    </nav>
     <div class="main">
-        <div class="header">
-            <button class="btn"><i class="fas fa-bars"></i></button> <span class="title-menu">Home</span>
-        </div>
-        <div class="container-fluid">
-            <h1>Welcome !</h1>
-            <div class="row justify-content-center">
-                <div class="col-8">
-                    <div class="row justify-content-center">
-                        <div class="col-2">
-                            <i class="fas fa-home fa-5x"></i>
-                        </div>
-                        <div class="col-2">
-                            <i class="fas fa-users fa-5x"></i>
-                        </div>
-                        <div class="col-2">
-                            <i class="fas fa-calendar-alt fa-5x"></i>
-                        </div>
-                        <div class="col-2">
-                            <i class="fas fa-comments fa-5x"></i>
-                        </div>
-                        <div class="w-100"></div>
-                        <div class="col-2">
-                            <i class="fas fa-cubes fa-5x"></i>
-                        </div>
-                        <div class="col-2">
-                            <i class="fas fa-book fa-5x"></i>
-                        </div>
-                        <div class="col-2">
-                            <i class="fas fa-cogs fa-5x"></i>
-                        </div>
-                        <div class="col-2">
-                            <i class="fas fa-sign-out-alt fa-5x"></i>
-                        </div>
+        <div class="content">
+            <div class="row">
+                <div class="header">
+                    <button class="btn"><i class="fas fa-bars"></i>
+                    </button> <span class="title-menu">Home</span>
+                </div>
+            </div>
+            <div class="settings">
+                <h1>Welcome !</h1>
+                <div class="row justify-content-center">
+                    <div class="col-2">
+                        <a href="#!" class="item-icon"><i class="fas fa-home fa-5x"></i></a>
+                    </div>
+                    <div class="col-2">
+                        <a href="#!" class="item-icon"><i class="fas fa-users fa-5x"></i></a>
+                    </div>
+                    <div class="col-2">
+                        <a href="#!" class="item-icon"><i class="fas fa-calendar-alt fa-5x"></i></a>
+                    </div>
+                    <div class="col-2">
+                        <a href="#!" class="item-icon"><i class="fas fa-comments fa-5x"></i></a>
+                    </div>
+                    <div class="w-100"></div>
+                    <div class="col-2">
+                        <a href="#!" class="item-icon"><i class="fas fa-cubes fa-5x"></i></a>
+                    </div>
+                    <div class="col-2">
+                        <a href="#!" class="item-icon"><i class="fas fa-book fa-5x"></i></a>
+                    </div>
+                    <div class="col-2">
+                        <a href="#!" class="item-icon"><i class="fas fa-cogs fa-5x"></i></a>
+                    </div>
+                    <div class="col-2">
+                        <a href="#!" class="item-icon"><i class="fas fa-sign-out-alt fa-5x"></i></a>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="menu">
+            <nav class="nav flex-column menu-one">
+                <a class="nav-link logo" href="#!"><img src="../images/navi_logo.gif" alt=""></a>
+                <a class="nav-link logo" href="#!"><img src="../images/login.gif" alt=""></a>
+                <a class="nav-link item-first" href="#!"><img src="../images/schedule.gif" alt=""></a>
+                <a class="nav-link item-top" href="#!"><img src="../images/reserve.gif" alt=""></a>
+                <a class="nav-link item-top" href="#!"><img src="../images/setup.gif" alt=""></a>
+                <a class="nav-link item-top" href="#!"><img src="../images/room.gif" alt=""></a>
+                <a class="nav-link item-top" href="#!"><img src="../images/manual_icon_white.gif" alt=""></a>
+                <a class="nav-link item-bottom" href="#!"><img src="../images/top1.gif" alt=""></a>
+                <a class="nav-link item-logout" href="#!"><img src="../images/logout.gif" alt=""></a>
+                <li class="nav-link item-language" href="#!"><a href="#!">EN</a><a href="#!">JP</a></li>
+            </nav>
         </div>
     </div>
     <!-- Jquery -->
