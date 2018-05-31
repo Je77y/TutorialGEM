@@ -1,0 +1,36 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.main {
+	height: 100%; 
+}
+
+.logo,
+.sidebar,
+.header,
+.content {
+	border: 1px solid 1px;
+}
+
+.logo {
+	background: url('../images/navi_logo.gif') no-repeat;
+	height: 100px;
+}
+
+.header {
+	height: 42px;
+	background: #333;
+}
+
+.sidebar {
+	height: 100px;
+	background: #333;
+}
+
+.content {
+	background: url('../images/mian-bg2.gif') repeat;
+	height: 100px;
+}
+

@@ -1,0 +1,34 @@
+body {
+    color: white;
+    height: 100%;
+}
+
+.logo,
+.header,
+.slidebar,
+.content {
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    vertical-align: middle;
+}
+
+.logo {
+    background-color: red;
+    height: 75px;
+}
+
+.header {
+    background-color: gray;
+    height: 75px;
+}
+
+.slidebar {
+    background-color: darkgray;
+    height: 600px;
+}
+
+.content {
+    color: black;
+    height: 600px;
+}
