@@ -16,24 +16,29 @@
     body,
     html {
         min-height: 100%;
+        height: 100%;
     }
 
     .main {
+        position: relative;
         margin: 0px;
         padding: 0px;
         float: left;
         width: 100%;
         min-height: 100%;
+        /*height: 100%;*/
         background: url(../images/mian-bg2.gif) repeat;
     }
 
     .menu-one {
+        position: absolute;
+        top: 0;
         width: 208px;
         border: 0 solid #fff;
         background: #000;
         float: left;
-        min-height: 100%;
-        margin-top: -42px;
+        /*height: 100%;*/
+        /*height: 100%;*/
     }
 
     .logo {
@@ -97,9 +102,6 @@
     }
 
     .card {
-        position: absolute;
-        top: 110px;
-        left: 230px;
         background: #2D2D2D;
         width: 55rem;
         display: inline-block;
@@ -132,9 +134,9 @@
     }
 
     .menu-two {
-        position: absolute;
-        top: 50px;
-        left: 230px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-left: 55px;
         border-bottom: 0;
     }
 
@@ -167,139 +169,148 @@
                     </button> <span class="title-menu">Edit reservation</span>
                 </div>
             </div>
-            <ul class="nav nav-tabs menu-two">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#!">Reservation</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#!">List participants</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#!">Documents</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#!">Email</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="users.html">Back to list</a>
-                </li>
-            </ul>
-            <div class="card">
-                <div class="card-body">
-                    <form id="create-appointment">
-                        <div class="form-group row">
-                            <label for="staticEmail" class="col-sm-3 col-form-label text-left">Username</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" id="" placeholder="">
-                            </div>
+            <div class="row justify-content-center">
+                <div class="col-9">
+                    <ul class="nav nav-tabs menu-two">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#!">Reservation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!">List participants</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!">Documents</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!">Email</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="users.html">Back to list</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <form id="create-appointment">
+                                <div class="form-group row">
+                                    <label for="staticEmail" class="col-sm-3 col-form-label text-left">Username</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="" class="col-sm-3 col-form-label text-left">Password</label>
+                                    <div class="col-sm-9">
+                                        <input type="password" class="form-control" id="" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="" class="col-sm-3 col-form-label text-left">Confirm Password</label>
+                                    <div class="col-sm-9">
+                                        <input type="password" class="form-control" id="" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="" class="col-sm-3 col-form-label text-left">First name</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="" class="col-sm-3 col-form-label text-left">Last name</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="" class="col-sm-3 col-form-label text-left">Display name</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="" class="col-sm-3 col-form-label text-left">Email address 1</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="" class="col-sm-3 col-form-label text-left">Email address 2</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="" class="col-sm-3 col-form-label text-left">Camera Display Name</label>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control" id="" placeholder="">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control" id="" placeholder="">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control" id="" placeholder="">
+                                    </div>
+                                    <div class="w-100"></div>
+                                    <div class="col-sm-3"></div>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control" id="" placeholder="">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control" id="" placeholder="">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control" id="" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="" class="col-sm-3 col-form-label text-left">Language use in email</label>
+                                    <div class="col-sm-3">
+                                        <select class="custom-select"></select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="" class="col-sm-3 col-form-label text-left">Is Chairman</label>
+                                    <div class="col-sm-3">
+                                        <select class="custom-select"></select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="" class="col-sm-3 col-form-label text-left">Is Admin</label>
+                                    <div class="col-sm-3">
+                                        <select class="custom-select"></select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="" class="col-sm-3 col-form-label text-left">Status</label>
+                                    <div class="col-sm-3">
+                                        <select class="custom-select"></select>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-submit">Save</button>
+                            </form>
                         </div>
-                        <div class="form-group row">
-                            <label for="" class="col-sm-3 col-form-label text-left">Password</label>
-                            <div class="col-sm-9">
-                                <input type="password" class="form-control" id="" placeholder="">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="" class="col-sm-3 col-form-label text-left">Confirm Password</label>
-                            <div class="col-sm-9">
-                                <input type="password" class="form-control" id="" placeholder="">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="" class="col-sm-3 col-form-label text-left">First name</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" id="" placeholder="">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="" class="col-sm-3 col-form-label text-left">Last name</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" id="" placeholder="">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="" class="col-sm-3 col-form-label text-left">Display name</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" id="" placeholder="">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="" class="col-sm-3 col-form-label text-left">Email address 1</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" id="" placeholder="">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="" class="col-sm-3 col-form-label text-left">Email address 2</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" id="" placeholder="">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="" class="col-sm-3 col-form-label text-left">Camera Display Name</label>
-                            <div class="col-sm-3">
-                                <input type="text" class="form-control" id="" placeholder="">
-                            </div>
-                            <div class="col-sm-3">
-                                <input type="text" class="form-control" id="" placeholder="">
-                            </div>
-                            <div class="col-sm-3">
-                                <input type="text" class="form-control" id="" placeholder="">
-                            </div>
-                            <div class="w-100"></div>
-                            <div class="col-sm-3"></div>
-                            <div class="col-sm-3">
-                                <input type="text" class="form-control" id="" placeholder="">
-                            </div>
-                            <div class="col-sm-3">
-                                <input type="text" class="form-control" id="" placeholder="">
-                            </div>
-                            <div class="col-sm-3">
-                                <input type="text" class="form-control" id="" placeholder="">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="" class="col-sm-3 col-form-label text-left">Language use in email</label>
-                            <div class="col-sm-3">
-                                <select class="custom-select"></select>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="" class="col-sm-3 col-form-label text-left">Is Chairman</label>
-                            <div class="col-sm-3">
-                                <select class="custom-select"></select>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="" class="col-sm-3 col-form-label text-left">Is Admin</label>
-                            <div class="col-sm-3">
-                                <select class="custom-select"></select>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="" class="col-sm-3 col-form-label text-left">Status</label>
-                            <div class="col-sm-3">
-                                <select class="custom-select"></select>
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-submit">Save</button>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
-        <nav class="nav flex-column menu-one">
-            <a class="nav-link logo" href="index.html"><img src="../images/navi_logo.gif" alt=""></a>
-            <a class="nav-link logo" href="login.html"><img src="../images/login.gif" alt=""></a>
-            <a class="nav-link item-first" href="#!"><img src="../images/schedule.gif" alt=""></a>
-            <a class="nav-link item-top" href="#!"><img src="../images/reserve.gif" alt=""></a>
-            <a class="nav-link item-top" href="setup.html"><img src="../images/setup.gif" alt=""></a>
-            <a class="nav-link item-top" href="#!"><img src="../images/room.gif" alt=""></a>
-            <a class="nav-link item-top" href="#!"><img src="../images/manual_icon_white.gif" alt=""></a>
-            <a class="nav-link item-bottom" href="#!"><img src="../images/top1.gif" alt=""></a>
-            <a class="nav-link item-logout" href="login.html"><img src="../images/logout.gif" alt=""></a>
-            <li class="nav-link item-language" href="#!"><a href="#!">EN</a><a href="#!">JP</a></li>
-            <!-- <li class="nav-link item-language" href="#!"><a>JP</a></li> -->
-        </nav>
+    </div>
+    <nav class="nav flex-column menu-one">
+        <a class="nav-link logo" href="index.html"><img src="../images/navi_logo.gif" alt=""></a>
+        <a class="nav-link logo" href="login.html"><img src="../images/login.gif" alt=""></a>
+        <a class="nav-link item-first" href="#!"><img src="../images/schedule.gif" alt=""></a>
+        <a class="nav-link item-top" href="#!"><img src="../images/reserve.gif" alt=""></a>
+        <a class="nav-link item-top" href="setup.html"><img src="../images/setup.gif" alt=""></a>
+        <a class="nav-link item-top" href="#!"><img src="../images/room.gif" alt=""></a>
+        <a class="nav-link item-top" href="#!"><img src="../images/manual_icon_white.gif" alt=""></a>
+        <a class="nav-link item-bottom" href="#!"><img src="../images/top1.gif" alt=""></a>
+        <a class="nav-link item-logout" href="login.html"><img src="../images/logout.gif" alt=""></a>
+        <li class="nav-link item-language" href="#!"><a href="#!">EN</a><a href="#!">JP</a></li>
+        <!-- <li class="nav-link item-language" href="#!"><a>JP</a></li> -->
+    </nav>
     </div>
     <!-- Jquery -->
     <script src="../js/jquery-3.3.1.min.js"></script>
