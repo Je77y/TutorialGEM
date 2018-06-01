@@ -4,40 +4,43 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Home without sidebar</title>
+    <title>Add user</title>
     <!-- Bootstrap 4-->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="../web-fonts-with-css/css/fontawesome-all.min.css">
     <!-- Datepicker -->
     <link rel="stylesheet" type="text/css" href="../css/bootstrap-datepicker.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../css/add-user.css"> -->
     <style type="text/css">
     body,
     html {
-        height: 100%;
+        min-height: 100%;
     }
 
     .main {
-    	margin: 0px;
-    	padding: 0px;
+        margin: 0px;
+        padding: 0px;
         float: left;
-        width: 1110px;
-        height: 100%;
+        width: 100%;
+        min-height: 100%;
+        background: url(../images/mian-bg2.gif) repeat;
     }
 
-    .nav {
+    .menu-one {
         width: 208px;
         border: 0 solid #fff;
         background: #000;
         float: left;
-        height: 100%;
+        min-height: 100%;
+        margin-top: -42px;
     }
 
     .logo {
         padding: 0;
     }
 
-    .nav-link {
+    .menu-one>.nav-link {
         text-align: center;
         padding: 0.1rem 0.1rem;
     }
@@ -52,7 +55,8 @@
     }
 
     .item-language {
-    	margin-top: 10px;
+        margin-top: 10px;
+        margin-bottom: 100px;
     }
 
     .item-language>a {
@@ -60,9 +64,11 @@
         margin: 0 15px;
     }
 
-    /*.nav>li {
-        margin-bottom: 20px;
-    }*/
+    .header {
+        text-align: left;
+        width: 100%;
+        margin-left: 210px;
+    }
 
     .header,
     .header .btn {
@@ -79,17 +85,8 @@
         color: red;
     }
 
-    .col-2 {
-        border: 1px solid #333333;
-        background-color: #333333;
-        color: #fff;
-        margin: 1rem;
-        padding: 0.9rem;
-    }
-
     .container-fluid {
-        background: url(../images/mian-bg2.gif) repeat;
-        height: 93.8%;
+        min-height: 100%;
         color: #fff;
         text-align: center;
         width: 100%;
@@ -98,30 +95,211 @@
     h1 {
         font-size: 3.5rem;
     }
+
+    .card {
+        position: absolute;
+        top: 110px;
+        left: 230px;
+        background: #2D2D2D;
+        width: 55rem;
+        display: inline-block;
+    }
+
+    .call-conference {
+        background: #333;
+        color: #fff;
+        border: 0px;
+    }
+
+    .input-group-text {
+        background: #464646;
+        border: 0px;
+        color: #fff;
+    }
+
+    .custom-radio {
+        float: left;
+    }
+
+    .custom-radio:first-child {
+        margin-left: 15px;
+    }
+
+    .btn-submit {
+        float: right;
+        background: #00C189;
+        color: #fff;
+    }
+
+    .menu-two {
+        position: absolute;
+        top: 50px;
+        left: 230px;
+        border-bottom: 0;
+    }
+
+    .menu-two .nav-link.active {
+        border: 0;
+        background: #315880;
+        color: #fff;
+    }
+
+    .menu-two .nav-link:hover {
+        background: #315880;
+    }
+
+    .menu-two .nav-link {
+        padding: .4rem 3rem;
+        color: #fff;
+        border: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
     </style>
 </head>
 
 <body>
-    <nav class="nav flex-column">
-        <a class="nav-link logo" href="#!"><img src="../images/navi_logo.gif" alt=""></a>
-        <a class="nav-link logo" href="#!"><img src="../images/login.gif" alt=""></a>
-        <a class="nav-link item-first" href="#!"><img src="../images/schedule.gif" alt=""></a>
-        <a class="nav-link item-top" href="#!"><img src="../images/reserve.gif" alt=""></a>
-        <a class="nav-link item-top" href="#!"><img src="../images/setup.gif" alt=""></a>
-        <a class="nav-link item-top" href="#!"><img src="../images/room.gif" alt=""></a>
-        <a class="nav-link item-top" href="#!"><img src="../images/manual_icon_white.gif" alt=""></a>
-        <a class="nav-link item-bottom" href="#!"><img src="../images/top1.gif" alt=""></a>
-        <a class="nav-link item-logout" href="#!"><img src="../images/logout.gif" alt=""></a>
-        <li class="nav-link item-language" href="#!"><a href="#!">EN</a><a href="#!">JP</a></li>
-        <!-- <li class="nav-link item-language" href="#!"><a>JP</a></li> -->
-    </nav>
     <div class="main">
-        <div class="header">
-            <button class="btn"><i class="fas fa-bars"></i></button> <span class="title-menu">Home</span>
-        </div>
         <div class="container-fluid">
-            
+            <div class="row">
+                <div class="header">
+                    <button class="btn"><i class="fas fa-bars"></i>
+                    </button> <span class="title-menu">Edit reservation</span>
+                </div>
+            </div>
+            <ul class="nav nav-tabs menu-two">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#!">Reservation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#!">List participants</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#!">Documents</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#!">Email</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#!">Back to list</a>
+                </li>
+            </ul>
+            <div class="card">
+                <div class="card-body">
+                    <form id="create-appointment">
+                        <div class="form-group row">
+                            <label for="staticEmail" class="col-sm-3 col-form-label text-left">Username</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="" class="col-sm-3 col-form-label text-left">Password</label>
+                            <div class="col-sm-9">
+                                <input type="password" class="form-control" id="" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="" class="col-sm-3 col-form-label text-left">Confirm Password</label>
+                            <div class="col-sm-9">
+                                <input type="password" class="form-control" id="" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="" class="col-sm-3 col-form-label text-left">First name</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="" class="col-sm-3 col-form-label text-left">Last name</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="" class="col-sm-3 col-form-label text-left">Display name</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="" class="col-sm-3 col-form-label text-left">Email address 1</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="" class="col-sm-3 col-form-label text-left">Email address 2</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="" class="col-sm-3 col-form-label text-left">Camera Display Name</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="" placeholder="">
+                            </div>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="" placeholder="">
+                            </div>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="" placeholder="">
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="" placeholder="">
+                            </div>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="" placeholder="">
+                            </div>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="" class="col-sm-3 col-form-label text-left">Language use in email</label>
+                            <div class="col-sm-3">
+                                <select class="custom-select"></select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="" class="col-sm-3 col-form-label text-left">Is Chairman</label>
+                            <div class="col-sm-3">
+                                <select class="custom-select"></select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="" class="col-sm-3 col-form-label text-left">Is Admin</label>
+                            <div class="col-sm-3">
+                                <select class="custom-select"></select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="" class="col-sm-3 col-form-label text-left">Status</label>
+                            <div class="col-sm-3">
+                                <select class="custom-select"></select>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-submit">Save</button>
+                    </form>
+                </div>
+            </div>
         </div>
+        <nav class="nav flex-column menu-one">
+            <a class="nav-link logo" href="#!"><img src="../images/navi_logo.gif" alt=""></a>
+            <a class="nav-link logo" href="#!"><img src="../images/login.gif" alt=""></a>
+            <a class="nav-link item-first" href="#!"><img src="../images/schedule.gif" alt=""></a>
+            <a class="nav-link item-top" href="#!"><img src="../images/reserve.gif" alt=""></a>
+            <a class="nav-link item-top" href="#!"><img src="../images/setup.gif" alt=""></a>
+            <a class="nav-link item-top" href="#!"><img src="../images/room.gif" alt=""></a>
+            <a class="nav-link item-top" href="#!"><img src="../images/manual_icon_white.gif" alt=""></a>
+            <a class="nav-link item-bottom" href="#!"><img src="../images/top1.gif" alt=""></a>
+            <a class="nav-link item-logout" href="#!"><img src="../images/logout.gif" alt=""></a>
+            <li class="nav-link item-language" href="#!"><a href="#!">EN</a><a href="#!">JP</a></li>
+            <!-- <li class="nav-link item-language" href="#!"><a>JP</a></li> -->
+        </nav>
     </div>
     <!-- Jquery -->
     <script src="../js/jquery-3.3.1.min.js"></script>
@@ -129,6 +307,16 @@
     <script src="../js/bootstrap.min.js"></script>
     <!-- Datepicker -->
     <script type="text/javascript" src="../js/bootstrap-datepicker.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        var date_input = $('.datetimepicker'); //our date input has the name "date"
+        date_input.datepicker({
+            format: 'mm/dd/yyyy',
+            todayHighlight: true,
+            autoclose: false,
+        })
+    })
+    </script>
 </body>
 
 </html>
