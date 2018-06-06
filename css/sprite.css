@@ -8,6 +8,7 @@
 .reserve-over,
 .room,
 .schedule,
+.schedule-over,
 .setup {
     background: url(../images/icon.png) no-repeat;
     border: 0;
@@ -45,6 +46,10 @@
 
 .schedule {
     background-position: -0px -697px;
+}
+
+.schedule-over {
+    background-position: -0px -634px;
 }
 
 .setup {

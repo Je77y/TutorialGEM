@@ -1,5 +1,4 @@
-body,
-html {
+body {
     min-height: 100vh;
     background: url(../images/mian-bg2.gif) repeat;
     color: #fff;
@@ -9,7 +8,7 @@ main {
 }
 
 .header {
-    height: 40px;
+    min-height: 40px;
 }
 
 .sidebar {
@@ -37,21 +36,26 @@ main {
 .settings {
     background: url(../images/login-bg.gif) no-repeat;
 }
+
+.menu-two .nav-link {
+    color: #fff;
+}
+
 .menu-two .nav-link.active,
 .menu-two .nav-link:hover {
     background: #315880;
-    color: #fff;
 }
 
 .create-appointment {
     background: #272727;
-    width: 55rem;
+    /*width: 5rem;*/
 }
 
 .call-conference {
     color: #fff;
     background: #333;
     border: 0px;
+    margin-right: 2.5rem;
 }
 
 .input-group-text {
