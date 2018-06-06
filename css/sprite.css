@@ -5,6 +5,7 @@
 .top2,
 .logout,
 .reserve,
+.reserve-over,
 .room,
 .schedule,
 .setup {
@@ -32,6 +33,10 @@
 
 .reserve {
     background-position: -0px -445px;
+}
+
+.reserve-over {
+    background-position: -0px -382px;
 }
 
 .room {

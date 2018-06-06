@@ -4,173 +4,73 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Setting</title>
+    <title>Settings</title>
     <!-- Bootstrap 4-->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="../web-fonts-with-css/css/fontawesome-all.min.css">
     <!-- Datepicker -->
     <link rel="stylesheet" type="text/css" href="../css/bootstrap-datepicker.min.css">
-    <style type="text/css">
-    body,
-    html {
-        min-height: 100%;
-    }
-
-    .main {
-        margin: 0px;
-        padding: 0px;
-        float: left;
-        width: 100%;
-        min-height: 100%;
-        background: url(../images/mian-bg2.gif) repeat;
-    }
-
-    .menu-one {
-        width: 208px;
-        border: 0 solid #fff;
-        background: #000;
-        float: left;
-        min-height: 100%;
-        margin-top: -42px;
-    }
-
-    .logo {
-        padding: 0;
-    }
-
-    .menu-one>.nav-link {
-        text-align: center;
-        padding: 0.1rem 0.1rem;
-    }
-
-    .item-first {
-        padding-top: 0;
-        margin-top: 0;
-    }
-
-    .item-bottom {
-        margin-top: 25px;
-    }
-
-    .item-language {
-        margin-top: 10px;
-        margin-bottom: 100px;
-    }
-
-    .item-language>a {
-        color: #00B37F;
-        margin: 0 15px;
-    }
-
-    .header {
-        text-align: left;
-        width: 100%;
-        margin-left: 210px;
-    }
-
-    .header,
-    .header .btn {
-        background: #D7D7D7;
-        border: 1px solid #D7D7D7;
-    }
-
-    .title-menu {
-        margin: auto 5px;
-        color: red;
-    }
-
-    .container-fluid {
-        min-height: 100%;
-        color: #fff;
-        text-align: center;
-        width: 100%;
-    }
-
-    h1 {
-        font-size: 3.5rem;
-    }
-
-    .card {
-        position: absolute;
-        top: 60px;
-        left: 230px;
-        background: #2D2D2D;
-        width: 55rem;
-    }
-
-    .call-conference {
-        background: #333;
-        color: #fff;
-        border: 0px;
-    }
-
-    .input-group-text {
-        background: #464646;
-        border: 0px;
-        color: #fff;
-    }
-
-    .custom-radio {
-        float: left;
-    }
-
-    .custom-radio:first-child {
-        margin-left: 15px;
-    }
-
-    .btn-submit {
-        float: right;
-        background: #00C189;
-        color: #fff;
-    }
-
-    .menu-2 {
-        background: url(../images/login-bg.gif) no-repeat;
-        text-align: center;
-        width: 520px;
-        height: 100%;
-        position: absolute;
-        top: 90px;
-        left: 300px;
-    }
-
-    .menu-2 a:first-child {
-        margin-top: 10px;
-    }
-    </style>
+    <!-- Icon -->
+    <link rel="stylesheet" href="../css/sprite.css">
+    <!-- Style -->
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
-    <div class="main">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="header">
-                    <button class="btn"><i class="fas fa-bars"></i>
-                    </button> <span class="title-menu">Settings</span>
-                </div>
-            </div>
-            <nav class="nav flex-column menu-2">
-                <a class="nav-link" href="add-user.html"><img src="../images/menu_user_add.gif" alt=""></a>
-                <a class="nav-link" href="users.html"><img src="../images/menu_user_list.gif" alt=""></a>
-                <a class="nav-link" href="#!"><img src="../images/menu_settei.gif" alt=""></a>
-                <a class="nav-link" href="#!"><img src="../images/camera_set.gif" alt=""></a>
+    <nav class="nav bg-light">
+        <a class="nav-link px-0 py-0" href="#"><img src="../images/navi_logo.gif" alt=""></a>
+        <a class="nav-link text-dark pr-0" href="#"><span class="fas fa-bars"></span></a>
+        <a class="nav-link text-danger ml-0" href="#">Settings</a>
+    </nav>
+    <div class="float-left sidebar h-100 px-0">
+        <ul class="nav flex-column px-0">
+            <li class="nav-item mb-0">
+                <a class="nav-link pl-0 py-0" href="#"><img src="../images/login.gif" alt=""></a>
+            </li>
+            <li class="nav-item mx-auto mt-0">
+                <a class="nav-link schedule" href="#"></a>
+            </li>
+            <li class="nav-item mx-auto">
+                <a class="nav-link reserve" href="#"></a>
+            </li>
+            <li class="nav-item mx-auto">
+                <a class="nav-link setup" href="#"></a>
+            </li>
+            <li class="nav-item mx-auto">
+                <a class="nav-link room" href="#"></a>
+            </li>
+            <li class="nav-item mx-auto">
+                <a class="nav-link manual-icon-white" href="#"></a>
+            </li>
+        </ul>
+        <ul class="nav flex-column pt-4">
+            <li class="nav-item mx-auto">
+                <a class="nav-link top1" href="#"></a>
+            </li>
+            <li class="nav-item mx-auto">
+                <a class="nav-link logout" href="#"></a>
+            </li>
+        </ul>
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link language-item" href="#">EN</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link language-item" href="#">JP</a>
+            </li>
+        </ul>
+    </div>
+    <main class="container-fluid h-100">
+        <div class="float-left h-100 content-wrapper">
+            <nav class="nav flex-column settings mt-5 ml-5 pr-5">
+                <a class="nav-link pl-5 mt-1" href="add-user.html"><img src="../images/menu_user_add.gif" alt=""></a>
+                <a class="nav-link pl-5 mt-1" href="users.html"><img src="../images/menu_user_list.gif" alt=""></a>
+                <a class="nav-link pl-5 mt-1" href="#!"><img src="../images/menu_settei.gif" alt=""></a>
+                <a class="nav-link pl-5 mt-1" href="#!"><img src="../images/camera_set.gif" alt=""></a>
             </nav>
         </div>
-        <nav class="nav flex-column menu-one">
-            <a class="nav-link logo" href="index.html"><img src="../images/navi_logo.gif" alt=""></a>
-            <a class="nav-link logo" href="login.html"><img src="../images/login.gif" alt=""></a>
-            <a class="nav-link item-first" href="#!"><img src="../images/schedule.gif" alt=""></a>
-            <a class="nav-link item-top" href="#!"><img src="../images/reserve.gif" alt=""></a>
-            <a class="nav-link item-top" href="setup.html"><img src="../images/setup-over.gif" alt=""></a>
-            <a class="nav-link item-top" href="#!"><img src="../images/room.gif" alt=""></a>
-            <a class="nav-link item-top" href="#!"><img src="../images/manual_icon_white.gif" alt=""></a>
-            <a class="nav-link item-bottom" href="#!"><img src="../images/top1.gif" alt=""></a>
-            <a class="nav-link item-logout" href="login.html"><img src="../images/logout.gif" alt=""></a>
-            <li class="nav-link item-language" href="#!"><a href="#!">EN</a><a href="#!">JP</a></li>
-            <!-- <li class="nav-link item-language" href="#!"><a>JP</a></li> -->
-        </nav>
-    </div>
+    </main>
     <!-- Jquery -->
     <script src="../js/jquery-3.3.1.min.js"></script>
     <!-- Bootstrap 4 -->

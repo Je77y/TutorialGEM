@@ -1,11 +1,11 @@
 body,
 html {
-    height: 100vh;
+    min-height: 100vh;
     background: url(../images/mian-bg2.gif) repeat;
+    color: #fff;
 }
 
 main {
-    position: relative;
 }
 
 .header {
@@ -14,19 +14,72 @@ main {
 
 .sidebar {
     background: #000;
-    /*flex: 0;*/
+    flex: 0;
     width: 208px;
     position: absolute;
-    top: 0;
+    min-height: 100vh;
+    top: 40px;
     left: 0;
     bottom: 0;
 }
 
-.item-icon {
+.content-wrapper {
+    margin-left: 208px;
+    /*width: 100%;*/
+}
+
+.icon-item {
     background: #000;
+    width: 150px;
+    height: 150px
+}
+
+.settings {
+    background: url(../images/login-bg.gif) no-repeat;
+}
+.menu-two .nav-link.active,
+.menu-two .nav-link:hover {
+    background: #315880;
     color: #fff;
-    display: inline-block;
-    padding: 1.5rem 1.5rem;
+}
+
+.create-appointment {
+    background: #272727;
+    width: 55rem;
+}
+
+.call-conference {
+    color: #fff;
+    background: #333;
+    border: 0px;
+}
+
+.input-group-text {
+    border: 0px;
+    background: #464646;
+    color: #fff;
+}
+
+.btn-submit {
+    background: #00c189;
+    color: #fff;
+}
+
+.data-user .confirm {
+    display: block;
+    font-size: 100%;
+}
+
+.btn-edit {
+    background: #454545;
+    color: #fff;
+    border: 0px;
+}
+
+.btn-delete {
+    background: #f83e36;
+    color: #fff;
+    border: 0px;
 }
 
 .language-item {

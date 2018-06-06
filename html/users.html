@@ -4,274 +4,130 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Users</title>
+    <title>User list</title>
     <!-- Bootstrap 4-->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="../web-fonts-with-css/css/fontawesome-all.min.css">
     <!-- Datepicker -->
     <link rel="stylesheet" type="text/css" href="../css/bootstrap-datepicker.min.css">
-    <style type="text/css">
-    body,
-    html {
-        min-height: 100%;
-    }
-
-    .main {
-        margin: 0px;
-        padding: 0px;
-        float: left;
-        width: 100%;
-        min-height: 100%;
-        background: url(../images/mian-bg2.gif) repeat;
-    }
-
-    .menu-one {
-        width: 208px;
-        border: 0 solid #fff;
-        background: #000;
-        float: left;
-        min-height: 100%;
-        margin-top: -42px;
-    }
-
-    .logo {
-        padding: 0;
-    }
-
-    .menu-one>.nav-link {
-        text-align: center;
-        padding: 0.1rem 0.1rem;
-    }
-
-    .item-first {
-        padding-top: 0;
-        margin-top: 0;
-    }
-
-    .item-bottom {
-        margin-top: 25px;
-    }
-
-    .item-language {
-        margin-top: 10px;
-        margin-bottom: 100px;
-    }
-
-    .item-language>a {
-        color: #00B37F;
-        margin: 0 15px;
-    }
-
-    .header {
-        text-align: left;
-        width: 100%;
-        margin-left: 210px;
-    }
-
-    .header,
-    .header .btn {
-        background: #D7D7D7;
-        border: 1px solid #D7D7D7;
-    }
-
-    h1 {
-        padding: 20px;
-    }
-
-    .title-menu {
-        margin: auto 5px;
-        color: red;
-    }
-
-    .container-fluid {
-        min-height: 100%;
-        color: #fff;
-        text-align: center;
-        width: 100%;
-    }
-
-    h1 {
-        font-size: 3.5rem;
-    }
-
-    .card {
-        position: absolute;
-        top: 110px;
-        left: 230px;
-        background: #333;
-        width: 62rem;
-    }
-
-    .call-conference {
-        background: #333;
-        color: #fff;
-        border: 0px;
-    }
-
-    .input-group-text {
-        background: #464646;
-        border: 0px;
-        color: #fff;
-    }
-
-    .custom-radio {
-        float: left;
-    }
-
-    .custom-radio:first-child {
-        margin-left: 15px;
-    }
-
-    .btn-submit {
-        float: right;
-        background: #00C189;
-        color: #fff;
-    }
-
-    .menu-two {
-        position: absolute;
-        top: 50px;
-        left: 530px;
-        border-bottom: 0;
-    }
-
-    .menu-two .nav-link.active {
-        border: 0;
-        background: #315880;
-        color: #fff;
-    }
-
-    .menu-two .nav-link:hover {
-        background: #315880;
-    }
-
-    .menu-two .nav-link {
-        padding: .4rem 3rem;
-        color: #fff;
-        border: 0;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-    }
-
-    .card-body {
-        padding: 0;
-        margin: 0;
-    }
-
-    .table-dark {
-        background: #333;
-    }
-
-    td>a {
-        color: #fff;
-        display: inline-block;
-        padding: 2px 3px;
-    }
-
-    td>input {
-        width: 25px;
-    }
-    </style>
+    <!-- Icon -->
+    <link rel="stylesheet" href="../css/sprite.css">
+    <!-- Style -->
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
-    <div class="main">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="header">
-                    <button class="btn"><i class="fas fa-bars"></i>
-                    </button> <span class="title-menu">User list</span>
-                </div>
-            </div>
-            <ul class="nav menu-two">
+    <nav class="nav bg-light">
+        <a class="nav-link px-0 py-0" href="#"><img src="../images/navi_logo.gif" alt=""></a>
+        <a class="nav-link text-dark pr-0" href="#"><span class="fas fa-bars"></span></a>
+        <a class="nav-link text-danger ml-0" href="#">User list</a>
+    </nav>
+    <div class="float-left sidebar px-0">
+        <ul class="nav flex-column px-0">
+            <li class="nav-item mb-0">
+                <a class="nav-link pl-0 py-0" href="#"><img src="../images/login.gif" alt=""></a>
+            </li>
+            <li class="nav-item mx-auto mt-0">
+                <a class="nav-link schedule" href="#"></a>
+            </li>
+            <li class="nav-item mx-auto">
+                <a class="nav-link reserve-over" href="#"></a>
+            </li>
+            <li class="nav-item mx-auto">
+                <a class="nav-link setup" href="#"></a>
+            </li>
+            <li class="nav-item mx-auto">
+                <a class="nav-link room" href="#"></a>
+            </li>
+            <li class="nav-item mx-auto">
+                <a class="nav-link manual-icon-white" href="#"></a>
+            </li>
+        </ul>
+        <ul class="nav flex-column pt-4">
+            <li class="nav-item mx-auto">
+                <a class="nav-link top1" href="#"></a>
+            </li>
+            <li class="nav-item mx-auto">
+                <a class="nav-link logout" href="#"></a>
+            </li>
+        </ul>
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link language-item" href="#">EN</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link language-item" href="#">JP</a>
+            </li>
+        </ul>
+    </div>
+    <main class="container-fluid">
+        <div class="float-left content-wrapper">
+            <ul class="nav  my-2 ml-4 menu-two justify-content-center">
                 <li class="nav-item">
-                    <a class="nav-link active" href="users.html">User list</a>
+                    <a class="nav-link active" href="#">User list</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="add-user.html">Add user</a>
+                    <a class="nav-link text-white" href="#">Add user</a>
                 </li>
             </ul>
-            <div class="card">
-                <div class="card-body">
-                    <table class="table table-dark text-left table-bordered">
-                        <thead>
-                            <tr>
-                                <th>Username</th>
-                                <th>Display name</th>
-                                <th>Email 1</th>
-                                <th>Email 2</th>
-                                <th>Is Chairman</th>
-                                <th>Is Admin</th>
-                                <th>Set crder</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>donamkhanh</td>
-                                <td>Nam Khanh Do</td>
-                                <td>donamkhanh@gmail.com.vn</td>
-                                <td>me@donamkhanh.com</td>
-                                <td>Yes</td>
-                                <td>Yes</td>
-                                <td>
-                                    <input type="text">
-                                </td>
-                                <td>
-                                    <a href="#!" style="background: #464646"><i class="far fa-edit"></i></a>
-                                    <a href="#!" style="background: red"><i class="far fa-trash-alt"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>donamkhanh</td>
-                                <td>Nam Khanh Do</td>
-                                <td>donamkhanh@gmail.com.vn</td>
-                                <td>me@donamkhanh.com</td>
-                                <td>Yes</td>
-                                <td>Yes</td>
-                                <td>
-                                    <input type="text">
-                                </td>
-                                <td>
-                                    <a href="#!" style="background: #464646"><i class="far fa-edit"></i></a>
-                                    <a href="#!" style="background: red"><i class="far fa-trash-alt"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>donamkhanh</td>
-                                <td>Nam Khanh Do</td>
-                                <td>donamkhanh@gmail.com.vn</td>
-                                <td>me@donamkhanh.com</td>
-                                <td>Yes</td>
-                                <td>Yes</td>
-                                <td>
-                                    <input type="text">
-                                </td>
-                                <td>
-                                    <a href="#!" style="background: #464646"><i class="far fa-edit"></i></a>
-                                    <a href="#!" style="background: red"><i class="far fa-trash-alt"></i></a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+            <table class="table table-dark data-user">
+                <thead>
+                    <tr>
+                        <th scope="col">Username</th>
+                        <th scope="col">Display name</th>
+                        <th scope="col">Email 1</th>
+                        <th scope="col">Email 2</th>
+                        <th scope="col">Is Chairman</th>
+                        <th scope="col">Is Admin</th>
+                        <th scope="col">Set Order <span class="confirm badge badge-light">Confirm</span></th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">donamkhanh</th>
+                        <td>Nam Khanh Do</td>
+                        <td>donamkhanh@gmail.com.vn</td>
+                        <td>me@gmail.com.jp</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td class="text-center"><input type="text" name="order" value="0" style="width: 2rem;"></td>
+                        <td>
+                            <button type="button" class="btn-edit"><span class="far fa-edit"></span></button>
+                            <button type="button" class="btn-delete"><span class="fas fa-trash-alt"></span></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">donamkhanh</th>
+                        <td>Nam Khanh Do</td>
+                        <td>donamkhanh@gmail.com.vn</td>
+                        <td>me@gmail.com.jp</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td class="text-center"><input type="text" name="order" value="0" style="width: 2rem;"></td>
+                        <td>
+                            <button type="button" class="btn-edit"><span class="far fa-edit"></span></button>
+                            <button type="button" class="btn-delete"><span class="fas fa-trash-alt"></span></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">donamkhanh</th>
+                        <td>Nam Khanh Do</td>
+                        <td>donamkhanh@gmail.com.vn</td>
+                        <td>me@gmail.com.jp</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td class="text-center"><input type="text" name="order" value="0" style="width: 2rem;"></td>
+                        <td>
+                            <button type="button" class="btn-edit"><span class="far fa-edit"></span></button>
+                            <button type="button" class="btn-delete"><span class="fas fa-trash-alt"></span></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <nav class="nav flex-column menu-one">
-            <a class="nav-link logo" href="index.html"><img src="../images/navi_logo.gif" alt=""></a>
-            <a class="nav-link logo" href="#!"><img src="../images/login.gif" alt=""></a>
-            <a class="nav-link item-first" href="#!"><img src="../images/schedule.gif" alt=""></a>
-            <a class="nav-link item-top" href="#!"><img src="../images/reserve.gif" alt=""></a>
-            <a class="nav-link item-top" href="setup.html"><img src="../images/setup.gif" alt=""></a>
-            <a class="nav-link item-top" href="#!"><img src="../images/room.gif" alt=""></a>
-            <a class="nav-link item-top" href="#!"><img src="../images/manual_icon_white.gif" alt=""></a>
-            <a class="nav-link item-bottom" href="#!"><img src="../images/top1.gif" alt=""></a>
-            <a class="nav-link item-logout" href="login.html"><img src="../images/logout.gif" alt=""></a>
-            <li class="nav-link item-language" href="#!"><a href="#!">EN</a><a href="#!">JP</a></li>
-            <!-- <li class="nav-link item-language" href="#!"><a>JP</a></li> -->
-        </nav>
-    </div>
+    </main>
     <!-- Jquery -->
     <script src="../js/jquery-3.3.1.min.js"></script>
     <!-- Bootstrap 4 -->

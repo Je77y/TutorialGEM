@@ -14,56 +14,51 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light header pl-0">
-        <!-- <a class="navbar-brand" href="#"><img src="../images/navi_logo.gif" alt=""><span class="border-right"></span></a> -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><span class="fas fa-bars"></span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link text-danger" href="#">Home</a>
-                </li>
-            </ul>
-        </div>
+    <nav class="nav bg-light">
+        <a class="nav-link px-0 py-0 d-none" href="#"><img src="../images/navi_logo.gif" alt=""></a>
+        <a class="nav-link text-dark pr-0" href="#"><span class="fas fa-bars"></span></a>
+        <a class="nav-link text-danger ml-0" href="#">Home</a>
     </nav>
-    <main class="container-fluid h-auto">
-        <div class="row h-100">
-            <div class="col-md-2 sidebar px-0">
+                <div class="float-left sidebar h-100 px-0 d-none">
             </div>
-            <div class="col-md-10 h-auto mx-auto mt-5">
-                <h1 class="text-white text-center">Welcome !</h1>
+    <main class="container-fluid h-auto">
+
+            <div class="float-left h-100 mx-auto">
+                <h1 class="text-white text-center mt-5">Welcome !</h1>
                 <div class="container mx-auto">
                     <div class="row justify-content-center mb-5">
-                        <div class="col-sm-2 text-center my-2 item-icon">
-                            <a href="index.html" ><span class="fas fa-home fa-5x"></span></a>
-                        </div>
-                        <div class="col-sm-2 text-center my-2 item-icon">
-                            <a href="index.html" ><span class="fas fa-users fa-5x"></span></a>
-                        </div>
-                        <div class="col-sm-2 text-center my-2 item-icon">
-                            <a href="index.html" ><span class="fas fa-calendar-alt fa-5x"></span></a>
-                        </div>
-                        <div class="col-sm-2 text-center my-2 item-icon">
-                            <a href="index.html" ><span class="fas fa-comments fa-5x"></span></a>
-                        </div>
+                        <ul class="nav justify-content-center">
+                            <li class="nav-item icon-item m-3 p-3 ">
+                                <a class="text-white nav-link" href="#"><span class="fas fa-home fa-5x"></span></a>
+                            </li>
+                            <li class="nav-item icon-item m-3 p-3 ">
+                                <a class="text-white nav-link" href="#"><span class="fas fa-users fa-5x"></span></a>
+                            </li>
+                            <li class="nav-item icon-item m-3 p-3 ">
+                                <a class="text-white nav-link" href="#"><span class="fas fa-calendar-alt fa-5x"></span></a>
+                            </li>
+                            <li class="nav-item icon-item m-3 p-3 ">
+                                <a class="text-white nav-link" href="#"><span class="fas fa-comments fa-5x"></span></a>
+                            </li>
+                        </ul>
                         <div class="w-100"></div>
-                        <div class="col-sm-2 text-center my-2 item-icon">
-                            <a href="index.html" ><span class="fas fa-cubes fa-5x"></span></a>
-                        </div>
-                        <div class="col-sm-2 text-center my-2 item-icon">
-                            <a href="index.html" ><span class="fas fa-book fa-5x"></span></a>
-                        </div>
-                        <div class="col-sm-2 text-center my-2 item-icon">
-                            <a href="index.html" ><span class="fas fa-cogs fa-5x"></span></a>
-                        </div>
-                        <div class="col-sm-2 text-center my-2 item-icon">
-                            <a href="index.html" ><span class="fas fa-sign-out-alt fa-5x"></span></a>
-                        </div>
+                        <ul class="nav justify-content-center">
+                            <li class="nav-item icon-item m-3 p-3 ">
+                                <a class="text-white nav-link" href="#"><span class="fas fa-cubes fa-5x"></span></a>
+                            </li>
+                            <li class="nav-item icon-item m-3 p-3 ">
+                                <a class="text-white nav-link" href="#"><span class="fas fa-book fa-5x"></span></a>
+                            </li>
+                            <li class="nav-item icon-item m-3 p-3 ">
+                                <a class="text-white nav-link" href="#"><span class="fas fa-cogs fa-5x"></span></a>
+                            </li>
+                            <li class="nav-item icon-item m-3 p-3 ">
+                                <a class="text-white nav-link" href="#"><span class="fas fa-sign-out-alt fa-5x"></span></a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
     </main>
     <!-- Jquery -->
     <script src="../js/jquery-3.3.1.min.js"></script>

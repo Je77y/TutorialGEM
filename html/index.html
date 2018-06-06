@@ -9,179 +9,112 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="../web-fonts-with-css/css/fontawesome-all.min.css">
-    <style type="text/css">
-    body,
-    html {
-        height: 100%;
-        min-height: 100%;
-    }
-
-    .main {
-        position: relative;
-        margin: 0px;
-        padding: 0px;
-        width: 100%;
-        height: 100%;
-        min-height: 100%;
-        background: url(../images/mian-bg2.gif) repeat;
-        clear: both;
-    }
-
-    .logo {
-        padding: 0;
-    }
-
-    .content {
-        height: 100%;
-        /*float: left;*/
-        color: #fff;
-        text-align: center;
-        width: 100%;
-        margin-right: 208px;
-    }
-
-    .settings {
-        width: 750px;
-        margin: 50px auto;
-        min-height: 100%;
-    }
-
-    .header {
-        text-align: left;
-        width: 100%;
-        padding-left: 15px;
-    }
-
-    .header,
-    .header .btn {
-        background: #D7D7D7;
-        border: 1px solid #D7D7D7;
-    }
-
-    h1 {
-        padding: 20px;
-    }
-
-    .title-menu {
-        margin: auto 5px;
-        color: red;
-    }
-
-    h1 {
-        font-size: 3.5rem;
-    }
-
-    .item-icon {
-        display: inline-block;
-        color: #fff;
-        border: 0px solid #333;
-        background: #333;
-        /*padding: 25px;*/
-    }
-
-    .menu {
-        float: left;
-        width: 208px;
-        background: #000;
-        min-height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-
-    .col-2 {
-        border: 1px solid #000;
-        background-color: #333333;
-        color: #fff;
-        margin: 1rem;
-        padding: 1rem;
-    }
-
-    .menu-one>.nav-link {
-        text-align: center;
-        padding: 0.1rem 0.1rem;
-    }
-
-    .item-first {
-        padding-top: 0;
-        margin-top: 0;
-    }
-
-    .item-bottom {
-        margin-top: 25px;
-    }
-
-    .item-language {
-        margin-top: 10px;
-        margin-bottom: 100px;
-    }
-
-    .item-language>a {
-        color: #00B37F;
-        margin: 0 15px;
-    }
-    </style>
+    <!-- Icon -->
+    <link rel="stylesheet" href="../css/sprite.css">
+    <!-- Style -->
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
-    <div class="main">
-            <div class="content">
-                <div class="row">
-                    <div class="header">
-                        <button class="btn"><i class="fas fa-bars"></i>
-                        </button> <span class="title-menu">Home</span>
-                    </div>
-                </div>
-                <div class="settings">
-                    <h1>Welcome !</h1>
-                    <div class="row justify-content-center">
-                        <div class="col-2">
-                            <a href="index.html" class="item-icon"><i class="fas fa-home fa-5x"></i></a>
-                        </div>
-                        <div class="col-2">
-                            <a href="users.html" class="item-icon"><i class="fas fa-users fa-5x"></i></a>
-                        </div>
-                        <div class="col-2">
-                            <a href="#!" class="item-icon"><i class="fas fa-calendar-alt fa-5x"></i></a>
-                        </div>
-                        <div class="col-2">
-                            <a href="#!" class="item-icon"><i class="fas fa-comments fa-5x"></i></a>
-                        </div>
-                        <div class="w-100"></div>
-                        <div class="col-2">
-                            <a href="#!" class="item-icon"><i class="fas fa-cubes fa-5x"></i></a>
-                        </div>
-                        <div class="col-2">
-                            <a href="#!" class="item-icon"><i class="fas fa-book fa-5x"></i></a>
-                        </div>
-                        <div class="col-2">
-                            <a href="#!" class="item-icon"><i class="fas fa-cogs fa-5x"></i></a>
-                        </div>
-                        <div class="col-2">
-                            <a href="login.html" class="item-icon"><i class="fas fa-sign-out-alt fa-5x"></i></a>
-                        </div>
-                    </div>
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light header pl-0">
+        <a class="navbar-brand" href="#"><img src="../images/navi_logo.gif" alt=""></a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="fas fa-bars"></span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-danger" href="#">Home</a>
+                </li>
+            </ul>
+        </div>
+    </nav> -->
+    <nav class="nav bg-light">
+        <a class="nav-link px-0 py-0" href="#"><img src="../images/navi_logo.gif" alt=""></a>
+        <a class="nav-link text-dark pr-0" href="#"><span class="fas fa-bars"></span></a>
+        <a class="nav-link text-danger ml-0" href="#">Home</a>
+    </nav>
+    <div class="float-left sidebar h-100 px-0">
+        <ul class="nav flex-column px-0">
+            <li class="nav-item mb-0">
+                <a class="nav-link pl-0 py-0" href="#"><img src="../images/login.gif" alt=""></a>
+            </li>
+            <li class="nav-item mx-auto mt-0">
+                <a class="nav-link schedule" href="#"></a>
+            </li>
+            <li class="nav-item mx-auto">
+                <a class="nav-link reserve" href="#"></a>
+            </li>
+            <li class="nav-item mx-auto">
+                <a class="nav-link setup" href="#"></a>
+            </li>
+            <li class="nav-item mx-auto">
+                <a class="nav-link room" href="#"></a>
+            </li>
+            <li class="nav-item mx-auto">
+                <a class="nav-link manual-icon-white" href="#"></a>
+            </li>
+        </ul>
+        <ul class="nav flex-column pt-4">
+            <li class="nav-item mx-auto">
+                <a class="nav-link top1" href="#"></a>
+            </li>
+            <li class="nav-item mx-auto">
+                <a class="nav-link logout" href="#"></a>
+            </li>
+        </ul>
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link language-item" href="#">EN</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link language-item" href="#">JP</a>
+            </li>
+        </ul>
+    </div>
+    <main class="container-fluid h-100">
+        <div class="float-left h-100 content-wrapper">
+            <h1 class="text-white text-center mt-5">Welcome !</h1>
+            <div class="container mx-auto">
+                <div class="row justify-content-center mb-5">
+                    <ul class="nav justify-content-center">
+                        <li class="nav-item icon-item m-3 p-3 ">
+                            <a class="text-white nav-link" href="#"><span class="fas fa-home fa-5x"></span></a>
+                        </li>
+                        <li class="nav-item icon-item m-3 p-3 ">
+                            <a class="text-white nav-link" href="#"><span class="fas fa-users fa-5x"></span></a>
+                        </li>
+                        <li class="nav-item icon-item m-3 p-3 ">
+                            <a class="text-white nav-link" href="#"><span class="fas fa-calendar-alt fa-5x"></span></a>
+                        </li>
+                        <li class="nav-item icon-item m-3 p-3 ">
+                            <a class="text-white nav-link" href="#"><span class="fas fa-comments fa-5x"></span></a>
+                        </li>
+                    </ul>
+                    <div class="w-100"></div>
+                    <ul class="nav justify-content-center">
+                        <li class="nav-item icon-item m-3 p-3 ">
+                            <a class="text-white nav-link" href="#"><span class="fas fa-cubes fa-5x"></span></a>
+                        </li>
+                        <li class="nav-item icon-item m-3 p-3 ">
+                            <a class="text-white nav-link" href="#"><span class="fas fa-book fa-5x"></span></a>
+                        </li>
+                        <li class="nav-item icon-item m-3 p-3 ">
+                            <a class="text-white nav-link" href="#"><span class="fas fa-cogs fa-5x"></span></a>
+                        </li>
+                        <li class="nav-item icon-item m-3 p-3 ">
+                            <a class="text-white nav-link" href="#"><span class="fas fa-sign-out-alt fa-5x"></span></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="menu">
-                <nav class="nav flex-column menu-one">
-                    <a class="nav-link logo" href="index.html"><img src="../images/navi_logo.gif" alt=""></a>
-                    <a class="nav-link logo" href="login.html"><img src="../images/login.gif" alt=""></a>
-                    <a class="nav-link item-first" href="#!"><img src="../images/schedule.gif" alt=""></a>
-                    <a class="nav-link item-top" href="#!"><img src="../images/reserve.gif" alt=""></a>
-                    <a class="nav-link item-top" href="setup.html"><img src="../images/setup.gif" alt=""></a>
-                    <a class="nav-link item-top" href="#!"><img src="../images/room.gif" alt=""></a>
-                    <a class="nav-link item-top" href="#!"><img src="../images/manual_icon_white.gif" alt=""></a>
-                    <a class="nav-link item-bottom" href="#!"><img src="../images/top1.gif" alt=""></a>
-                    <a class="nav-link item-logout" href="login.html"><img src="../images/logout.gif" alt=""></a>
-                    <li class="nav-link item-language" href="#!"><a href="#!">EN</a><a href="#!">JP</a></li>
-                </nav>
         </div>
-    </div>
+    </main>
     <!-- Jquery -->
     <script src="../js/jquery-3.3.1.min.js"></script>
     <!-- Bootstrap 4 -->
     <script src="../js/bootstrap.min.js"></script>
+    <!-- Script -->
 </body>
 
 </html>
