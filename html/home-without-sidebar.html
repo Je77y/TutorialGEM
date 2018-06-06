@@ -9,136 +9,62 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="../web-fonts-with-css/css/fontawesome-all.min.css">
-    <style type="text/css">
-    body,
-    html {
-        height: 100%;
-        min-height: 100%;
-    }
-
-    .main {
-        position: relative;
-        margin: 0px;
-        padding: 0px;
-        width: 100%;
-        height: 100%;
-        min-height: 100%;
-        background: url(../images/mian-bg2.gif) repeat;
-    }
-
-    .content {
-        height: 100%;
-    }
-
-    .settings {
-        width: 750px;
-        margin: 50px auto;
-        /*min-height: 100%;*/
-    }
-
-    .item-icon {
-        display: inline-block;
-        color: #fff;
-        border: 0px solid #333;
-        background: #333;
-        /*padding: 25px;*/
-    }
-
-    .menu-one {
-        width: 208px;
-        border: 0 solid #fff;
-        background: #000;
-        min-height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-
-    .logo {
-        padding: 0;
-    }
-
-    .col-2 {
-        border: 1px solid #000;
-        background-color: #333333;
-        color: #fff;
-        margin: 1rem;
-        padding: 1rem;
-    }
-
-    .header {
-        text-align: left;
-        width: 100%;
-    }
-
-    .header,
-    .header .btn {
-        background: #D7D7D7;
-        border: 1px solid #D7D7D7;
-    }
-
-    h1 {
-        padding: 20px;
-    }
-
-    .title-menu {
-        margin: auto 5px;
-        color: red;
-    }
-
-    .container-fluid {
-        color: #fff;
-        text-align: center;
-        width: 100%;
-    }
-
-    h1 {
-        font-size: 3.5rem;
-    }
-    </style>
+    <!-- Style -->
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
-    <div class="main">
-        <div class="content container-fluid">
-            <div class="row">
-                <div class="header">
-                    <button class="btn"><i class="fas fa-bars"></i>
-                    </button> <span class="title-menu">Home</span>
-                </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light header pl-0">
+        <!-- <a class="navbar-brand" href="#"><img src="../images/navi_logo.gif" alt=""><span class="border-right"></span></a> -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="fas fa-bars"></span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-danger" href="#">Home</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main class="container-fluid h-auto">
+        <div class="row h-100">
+            <div class="col-md-2 sidebar px-0">
             </div>
-            <div class="settings">
-                <h1>Welcome !</h1>
-                <div class="row justify-content-center">
-                    <div class="col-2">
-                        <a href="index.html" class="item-icon"><i class="fas fa-home fa-5x"></i></a>
-                    </div>
-                    <div class="col-2">
-                        <a href="users.html" class="item-icon"><i class="fas fa-users fa-5x"></i></a>
-                    </div>
-                    <div class="col-2">
-                        <a href="#!" class="item-icon"><i class="fas fa-calendar-alt fa-5x"></i></a>
-                    </div>
-                    <div class="col-2">
-                        <a href="#!" class="item-icon"><i class="fas fa-comments fa-5x"></i></a>
-                    </div>
-                    <div class="w-100"></div>
-                    <div class="col-2">
-                        <a href="#!" class="item-icon"><i class="fas fa-cubes fa-5x"></i></a>
-                    </div>
-                    <div class="col-2">
-                        <a href="#!" class="item-icon"><i class="fas fa-book fa-5x"></i></a>
-                    </div>
-                    <div class="col-2">
-                        <a href="#!" class="item-icon"><i class="fas fa-cogs fa-5x"></i></a>
-                    </div>
-                    <div class="col-2">
-                        <a href="login.html" class="item-icon"><i class="fas fa-sign-out-alt fa-5x"></i></a>
+            <div class="col-md-10 h-auto mx-auto mt-5">
+                <h1 class="text-white text-center">Welcome !</h1>
+                <div class="container mx-auto">
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-sm-2 text-center my-2 item-icon">
+                            <a href="index.html" ><span class="fas fa-home fa-5x"></span></a>
+                        </div>
+                        <div class="col-sm-2 text-center my-2 item-icon">
+                            <a href="index.html" ><span class="fas fa-users fa-5x"></span></a>
+                        </div>
+                        <div class="col-sm-2 text-center my-2 item-icon">
+                            <a href="index.html" ><span class="fas fa-calendar-alt fa-5x"></span></a>
+                        </div>
+                        <div class="col-sm-2 text-center my-2 item-icon">
+                            <a href="index.html" ><span class="fas fa-comments fa-5x"></span></a>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="col-sm-2 text-center my-2 item-icon">
+                            <a href="index.html" ><span class="fas fa-cubes fa-5x"></span></a>
+                        </div>
+                        <div class="col-sm-2 text-center my-2 item-icon">
+                            <a href="index.html" ><span class="fas fa-book fa-5x"></span></a>
+                        </div>
+                        <div class="col-sm-2 text-center my-2 item-icon">
+                            <a href="index.html" ><span class="fas fa-cogs fa-5x"></span></a>
+                        </div>
+                        <div class="col-sm-2 text-center my-2 item-icon">
+                            <a href="index.html" ><span class="fas fa-sign-out-alt fa-5x"></span></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
     <!-- Jquery -->
     <script src="../js/jquery-3.3.1.min.js"></script>
     <!-- Bootstrap 4 -->

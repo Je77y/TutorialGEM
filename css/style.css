@@ -1,34 +1,66 @@
-body {
-    color: white;
-    height: 100%;
+body,
+html {
+    height: 100vh;
+    background: url(../images/mian-bg2.gif) repeat;
 }
 
-.logo,
-.header,
-.slidebar,
-.content {
-    text-align: center;
-    font-weight: bold;
-    font-size: 25px;
-    vertical-align: middle;
-}
-
-.logo {
-    background-color: red;
-    height: 75px;
+main {
+    position: relative;
 }
 
 .header {
-    background-color: gray;
-    height: 75px;
+    height: 40px;
 }
 
-.slidebar {
-    background-color: darkgray;
-    height: 600px;
+.sidebar {
+    background: #000;
+    /*flex: 0;*/
+    width: 208px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
 }
 
-.content {
-    color: black;
-    height: 600px;
+.item-icon {
+    background: #000;
+    color: #fff;
+    display: inline-block;
+    padding: 1.5rem 1.5rem;
+}
+
+.language-item {
+    color: #009b6d;
+}
+
+.schedule:hover {
+    background-position: -0px -634px;
+}
+
+.reserve:hover {
+    background-position: -0px -382px;
+}
+
+.manual-icon-white:hover {
+    background-position: -0px -0px;
+}
+
+.top1:hover {
+    background-position: -0px -192px;
+}
+
+.logout:hover {
+    background-position: -0px -256px;
+}
+
+.room:hover {
+    background-position: -0px -508px;
+}
+
+.schedule:hover {
+    background-position: -0px -634px;
+}
+
+.setup:hover {
+    background-position: -0px -760px;
 }
