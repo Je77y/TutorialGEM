@@ -1,11 +1,13 @@
 body {
     background: url(../images/mian-bg2.gif) repeat;
     color: #fff;
+    min-height: 100vh;
 }
 
 main {
     margin-left: 208px;
     width: calc(100% - 208px);
+    min-height: 100vh;
 }
 
 .header {
@@ -25,7 +27,7 @@ main {
 
 .content-wrapper {
     margin-left: 208px;
-    /*width: 100%;*/
+    width: calc(100% - 208px);
 }
 
 .icon-item {
@@ -45,6 +47,23 @@ main {
 .menu-two .nav-link.active,
 .menu-two .nav-link:hover {
     background: #315880;
+}
+
+.appointment {
+    background: #272727;
+}
+
+.rooms .card-header {
+    background: #464646;
+}
+
+.rooms {
+    width: 220px;
+}
+
+.rooms,
+.rooms .card-body {
+    background: #333333;
 }
 
 .create-appointment {
@@ -89,6 +108,12 @@ main {
 
 .language-item {
     color: #009b6d;
+}
+
+.datepicker-show {
+    background: #272727;
+    display: inline-block;
+    padding-bottom: 90px;
 }
 
 .schedule:hover {
