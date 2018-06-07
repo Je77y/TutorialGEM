@@ -1,14 +1,15 @@
 body {
-    min-height: 100vh;
     background: url(../images/mian-bg2.gif) repeat;
     color: #fff;
 }
 
 main {
+    margin-left: 208px;
+    width: calc(100% - 208px);
 }
 
 .header {
-    min-height: 40px;
+    height: 40px;
 }
 
 .sidebar {
@@ -16,7 +17,7 @@ main {
     flex: 0;
     width: 208px;
     position: absolute;
-    min-height: 100vh;
+    height: calc(100vh - 40px);
     top: 40px;
     left: 0;
     bottom: 0;

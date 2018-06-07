@@ -1,0 +1,24 @@
+body {
+    background: url(../images/mian-bg2.gif) repeat;
+    color: #fff;
+}
+
+.header {
+    padding-left: 0;
+    height: 40px;
+    line-height: 40px
+}
+
+aside {
+  position: relative;
+  height: calc(100vh - 40px);
+  background: #fff;
+  width: 208px;
+}
+
+.sidebar {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  bottom: 0;
+}
