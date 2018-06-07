@@ -49,8 +49,20 @@ main {
     background: #315880;
 }
 
+.item-block .list-group-item {
+    background-color: #272727;
+    /* border-bottom: 1px solid #fff; */
+}
+
 .appointment {
     background: #272727;
+}
+
+.appointment .card-body {
+    border: 1px solid #fff;
+    height: 100vh;
+    border-bottom: 0px;
+    padding: 0;
 }
 
 .rooms .card-header {
