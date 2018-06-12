@@ -2,58 +2,123 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login</title>
-    <!-- Bootstrap 4-->
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="../web-fonts-with-css/css/fontawesome-all.min.css">
-    <style type="text/css">
-        body {
-            background: url(../images/mian-bg2.gif) repeat;
-        }
-        .card {
-            margin: 150px auto;
-            color: #fff;
-            background-color: #464646;
-        }
-        .card-body {
-            background-color: #333;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login</title>
+  <!-- Bootstrap 4-->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../web-fonts-with-css/css/fontawesome-all.min.css">
+  <style type="text/css">
+  body {
+    background: url(../images/mian-bg2.gif) repeat;
+  }
+
+  .card {
+    margin: 150px auto;
+    color: #fff;
+    background-color: #464646;
+  }
+
+  .card-body {
+    background-color: #333;
+  }
+  /*.valid-feedback {
+    color: #dc3545;
+  }*/
+  </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="card" style="width: 25rem;">
-                <div class="card-header font-weight-bold">
-                    Login
-                </div>
-                <div class="card-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="username">User name</label>
-                            <input type="username" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" class="form-control">
-                        </div>
-                        <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Login</button>
-                    </form>
-                </div>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="card" style="width: 25rem;">
+        <div class="card-header font-weight-bold">
+          Login
         </div>
+        <div class="card-body">
+          <form class="login-form">
+            <div class="form-group">
+              <label for="username">User name</label>
+              <input type="text" class="form-control" name="username">
+              <div class="invalid-feedback">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" name="password">
+              <div class="invalid-feedback">
+              </div>
+            </div>
+            <button type="button" class="btn btn-primary" id="btn-submit"><i class="fas fa-sign-in-alt"></i> Login</button>
+          </form>
+        </div>
+      </div>
     </div>
-    </div>
-    </div>
-    <!-- Jquery -->
-    <script src="../js/jquery-3.3.1.min.js"></script>
-    <!-- Bootstrap 4 -->
-    <script src="../js/bootstrap.min.js"></script>
+  </div>
+  </div>
+  </div>
+  <!-- Jquery -->
+  <script src="../js/jquery-3.3.1.min.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="../js/bootstrap.min.js"></script>
+  <!-- My JS -->
+  <script src="../js/myscript.js"></script>
+  <!-- Script -->
+  <script>
+  // var frmLogin = document.querySelector('.login-form');
+  // frmLogin.elements[0].value;
+  let username = document.querySelector('[name="username"]');
+  let password = document.querySelector('[name="password"]');
+  let frmSub = document.querySelector('#btn-submit');
+
+  username.onkeyup = function() {
+    if (!checkRegx(username.value, REGEX_USERNAME)) {
+      showError(username, "Invalid Username");
+    } else {
+      username.classList.remove('is-invalid');
+    }
+  }
+
+  username.onblur = function() {
+    if (username.value === '') {
+      showError(username, 'Enter your username');
+    } else {
+      username.classList.remove('is-invalid');
+    }
+  }
+
+  password.onkeyup = function() {
+    if (!checkRegx(password.value, REGEX_PASSWORD)) {
+      showError(password, "Invalid Password");
+    } else {
+      password.classList.remove('is-invalid');
+    }
+  }
+
+  password.onblur = function() {
+    if (password.value === '') {
+      showError(password, 'Enter your password');
+    } else {
+      password.classList.remove('is-invalid');
+    }
+  }
+
+  frmSub.onclick = function() { 
+    let data = {
+      username: username.value,
+      password: password.value
+    };
+    let mss = dataAjax({
+      url: 'https://training.gemvietnam.com/dummy-api/users.json',
+      action: 'get',
+      data: data
+    });
+
+    console.log(mss);
+  }
+  </script>
 </body>
 
 </html>

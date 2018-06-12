@@ -2,148 +2,117 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>User list</title>
-    <!-- Bootstrap 4-->
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="../web-fonts-with-css/css/fontawesome-all.min.css">
-    <!-- Datepicker -->
-    <link rel="stylesheet" type="text/css" href="../css/bootstrap-datepicker.min.css">
-    <!-- Icon -->
-    <link rel="stylesheet" href="../css/sprite.css">
-    <!-- Style -->
-    <link rel="stylesheet" href="../css/style.css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>User list</title>
+  <!-- Bootstrap 4-->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../web-fonts-with-css/css/fontawesome-all.min.css">
+  <!-- Datepicker -->
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap-datepicker.min.css">
+  <!-- Icon -->
+  <link rel="stylesheet" href="../css/sprite.css">
+  <!-- Style -->
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
-    <nav class="nav bg-light">
-        <a class="nav-link px-0 py-0" href="#"><img src="../images/navi_logo.gif" alt=""></a>
-        <a class="nav-link text-dark pr-0" href="#"><span class="fas fa-bars"></span></a>
-        <a class="nav-link text-danger ml-0" href="#">User list</a>
-    </nav>
-    <div class="float-left sidebar px-0">
-        <ul class="nav flex-column px-0">
-            <li class="nav-item mb-0">
-                <a class="nav-link pl-0 py-0" href="#"><img src="../images/login.gif" alt=""></a>
-            </li>
-            <li class="nav-item mx-auto mt-0">
-                <a class="nav-link schedule" href="#"></a>
-            </li>
-            <li class="nav-item mx-auto">
-                <a class="nav-link reserve" href="#"></a>
-            </li>
-            <li class="nav-item mx-auto">
-                <a class="nav-link setup" href="#"></a>
-            </li>
-            <li class="nav-item mx-auto">
-                <a class="nav-link room" href="#"></a>
-            </li>
-            <li class="nav-item mx-auto">
-                <a class="nav-link manual-icon-white" href="#"></a>
-            </li>
-        </ul>
-        <ul class="nav flex-column pt-4">
-            <li class="nav-item mx-auto">
-                <a class="nav-link top1" href="#"></a>
-            </li>
-            <li class="nav-item mx-auto">
-                <a class="nav-link logout" href="#"></a>
-            </li>
-        </ul>
-        <ul class="nav justify-content-center">
-            <li class="nav-item">
-                <a class="nav-link language-item" href="#">EN</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link language-item" href="#">JP</a>
-            </li>
-        </ul>
+  <nav class="nav bg-light">
+    <a class="nav-link px-0 py-0" href="#"><img src="../images/navi_logo.gif" alt=""></a>
+    <a class="nav-link text-dark pr-0" href="#"><span class="fas fa-bars"></span></a>
+    <a class="nav-link text-danger ml-0" href="#">User list</a>
+  </nav>
+  <div class="float-left sidebar px-0">
+    <ul class="nav flex-column px-0">
+      <li class="nav-item mb-0">
+        <a class="nav-link pl-0 py-0" href="#"><img src="../images/login.gif" alt=""></a>
+      </li>
+      <li class="nav-item mx-auto mt-0">
+        <a class="nav-link schedule" href="#"></a>
+      </li>
+      <li class="nav-item mx-auto">
+        <a class="nav-link reserve" href="#"></a>
+      </li>
+      <li class="nav-item mx-auto">
+        <a class="nav-link setup" href="#"></a>
+      </li>
+      <li class="nav-item mx-auto">
+        <a class="nav-link room" href="#"></a>
+      </li>
+      <li class="nav-item mx-auto">
+        <a class="nav-link manual-icon-white" href="#"></a>
+      </li>
+    </ul>
+    <ul class="nav flex-column pt-4">
+      <li class="nav-item mx-auto">
+        <a class="nav-link top1" href="#"></a>
+      </li>
+      <li class="nav-item mx-auto">
+        <a class="nav-link logout" href="#"></a>
+      </li>
+    </ul>
+    <ul class="nav justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link language-item" href="#">EN</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link language-item" href="#">JP</a>
+      </li>
+    </ul>
+  </div>
+  <main class="container-fluid">
+    <div class="float-left content-wrapper">
+      <ul class="nav my-2 ml-4 menu-two justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">User list</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Add user</a>
+        </li>
+      </ul>
+      <table class="table table-dark data-user">
+        <thead>
+          <tr>
+            <th scope="col">Username</th>
+            <th scope="col">Display name</th>
+            <th scope="col">Email 1</th>
+            <th scope="col">Email 2</th>
+            <th scope="col">Is Chairman</th>
+            <th scope="col">Is Admin</th>
+            <th scope="col">Set Order <span class="confirm badge badge-light">Confirm</span></th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+      </table>
     </div>
-    <main class="container-fluid">
-        <div class="float-left content-wrapper">
-            <ul class="nav my-2 ml-4 menu-two justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">User list</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Add user</a>
-                </li>
-            </ul>
-            <table class="table table-dark data-user">
-                <thead>
-                    <tr>
-                        <th scope="col">Username</th>
-                        <th scope="col">Display name</th>
-                        <th scope="col">Email 1</th>
-                        <th scope="col">Email 2</th>
-                        <th scope="col">Is Chairman</th>
-                        <th scope="col">Is Admin</th>
-                        <th scope="col">Set Order <span class="confirm badge badge-light">Confirm</span></th>
-                        <th scope="col">Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">donamkhanh</th>
-                        <td>Nam Khanh Do</td>
-                        <td>donamkhanh@gmail.com.vn</td>
-                        <td>me@gmail.com.jp</td>
-                        <td>Yes</td>
-                        <td>Yes</td>
-                        <td class="text-center"><input type="text" name="order" value="0" style="width: 2rem;"></td>
-                        <td>
-                            <button type="button" class="btn-edit"><span class="far fa-edit"></span></button>
-                            <button type="button" class="btn-delete"><span class="fas fa-trash-alt"></span></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">donamkhanh</th>
-                        <td>Nam Khanh Do</td>
-                        <td>donamkhanh@gmail.com.vn</td>
-                        <td>me@gmail.com.jp</td>
-                        <td>Yes</td>
-                        <td>Yes</td>
-                        <td class="text-center"><input type="text" name="order" value="0" style="width: 2rem;"></td>
-                        <td>
-                            <button type="button" class="btn-edit"><span class="far fa-edit"></span></button>
-                            <button type="button" class="btn-delete"><span class="fas fa-trash-alt"></span></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">donamkhanh</th>
-                        <td>Nam Khanh Do</td>
-                        <td>donamkhanh@gmail.com.vn</td>
-                        <td>me@gmail.com.jp</td>
-                        <td>Yes</td>
-                        <td>Yes</td>
-                        <td class="text-center"><input type="text" name="order" value="0" style="width: 2rem;"></td>
-                        <td>
-                            <button type="button" class="btn-edit"><span class="far fa-edit"></span></button>
-                            <button type="button" class="btn-delete"><span class="fas fa-trash-alt"></span></button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </main>
-    <!-- Jquery -->
-    <script src="../js/jquery-3.3.1.min.js"></script>
-    <!-- Bootstrap 4 -->
-    <script src="../js/bootstrap.min.js"></script>
-    <!-- Datepicker -->
-    <script type="text/javascript" src="../js/bootstrap-datepicker.min.js"></script>
-    <script>
-    $(document).ready(function() {
-        var date_input = $('.datetimepicker'); //our date input has the name "date"
-        date_input.datepicker({
-            format: 'mm/dd/yyyy',
-            todayHighlight: true,
-            autoclose: true,
-        })
-    })
-    </script>
+  </main>
+  <!-- Jquery -->
+  <script src="../js/jquery-3.3.1.min.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="../js/bootstrap.min.js"></script>
+  <!-- Datepicker -->
+  <script type="text/javascript" src="../js/bootstrap-datepicker.min.js"></script>
+  <!-- My JS -->
+  <script src="../js/myscript.js"></script>
+  <script>
+  $(document).ready(function() {
+    var date_input = $('.datetimepicker'); //our date input has the name "date"
+    date_input.datepicker({
+      format: 'mm/dd/yyyy',
+      todayHighlight: true,
+      autoclose: true,
+    });
+
+    getDataAjax({
+      url: 'https://training.gemvietnam.com/dummy-api/users.json',
+      action: 'get'
+    });
+  });
+  </script>
 </body>
 
 </html>
