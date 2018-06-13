@@ -5,46 +5,71 @@ const USER_TABLE = 1;
 const REGEX_USERNAME = /^([a-zA-z]+)$/;
 const REGEX_PASSWORD = /^((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!\"#'$%&()=~|\\/]).{6,16})$/;
 
-// 
-// const REGEX = [
-//   /^([a-zA-z]+)$/,
-//   /^((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!\"#'$%&()=~|\\/]).{6,16})$/
-// ]
+// Alert
+const SUCCESS = 'success';
+const DANGER = 'danger';
 
-// const [USERNAME, PASSWORD] = REGEX;
-
+// Nocation
+const NOC_SUCC = "Success";
+const NOC_DANG = "Danger";
 
 // Draw row user
 function rowTableUser(obj) {
-  var data = '<tr>' +
-    '<td scope="row">' + obj.first_name + '</td>' +
-    '<td>' + obj.display_name + '</td>' +
-    '<td>' + obj.email + '</td>' +
-    '<td>' + obj.email_alt + '</td>' +
-    '<td>' + obj.is_chairman + '</td>' +
-    '<td>' + obj.is_admin + '</td>' +
-    '<td class="text-center"><input type="text" name="order" value="' + obj.order + '" style="width: 2rem;"></td>' +
-    '<td><button type="button" data-id="" class="btn-edit"><span class="far fa-edit"></span></button>' +
-    '<button type="button" data-id="" class="btn-delete"><span class="fas fa-trash-alt"></span></button></td></tr>';
-  // var tag = document.createElement('div');
-  // tag.innerHTML = data;
+  var data = `<tr><td scope="row">${obj.first_name}</td>` +
+    `<td>${obj.display_name}</td>` +
+    `<td>${obj.email}</td>` +
+    `<td>${obj.email_alt}</td>` +
+    `<td>${obj.is_chairman}</td>` +
+    `<td>${obj.is_admin}</td>` +
+    `<td class="text-center"><input type="text" name="order" value="${obj.order}" style="width: 2rem;"></td>` +
+    `<td><button type="button" data-id="${obj.id}" class="btn-edit"><span class="far fa-edit"></span></button>` +
+    `<button type="button" data-id="${obj.id}" class="btn-delete"><span class="fas fa-trash-alt"></span></button></td></tr>`;
   return data;
+}
+
+function pagePagination(total, select = 1) {
+  var data = `<li class="page-item"><a class="page-link prev" href="#">Previous</a></li>`;
+  for (let i = 0; i < 10; i++) {
+    if ((i + 1 ) == select ) {
+      data += `<li class="page-item active"><a class="page-link page" href="#">${i+1}</a></li>`
+    } else {
+      data += `<li class="page-item"><a class="page-link page" href="#">${i+1}</a></li>`
+    }
+  }
+  data += `<li class="page-item"><a class="page-link next" href="#">Next</a></li>`;
+  return data;
+}
+
+function bindMessage(nocation, message, alert) {
+  var mss = document.querySelector('.message-alert');
+  var data = '<div class="alert alert-' + alert +' alert-dismissible fade show" role="alert">'
+  + '<strong>' + nocation + '!</strong>' + message
+  + '<button type="button" class="close" data-dismiss="alert" aria-label="Close">'
+  + '<span aria-hidden="true">&times;</span></button></div>';
+  
+  mss.insertAdjacentHTML('beforeend', data);
+}
+
+function bindPagination(total) {
+  let pagi = document.querySelector('.pagination');
+  pagi.innerHTML = "";
+  pagi.insertAdjacentHTML('beforeend', pagePagination(total));
 }
 
 // Draw table user
 function userTable(data) {
-  console.log(data)
-  var tableUser = document.querySelector('tbody');
+  console.log(data);
+  let tableUser = document.querySelector('tbody');
+
   tableUser.innerHTML = "";
   data.forEach(function(item) {
-    var row = rowTableUser(item);
-    tableUser.insertAdjacentHTML('beforeend', row);
-    // console.log(row);
+    tableUser.insertAdjacentHTML('beforeend', rowTableUser(item));
   });
+  // bindPagination(total);
 }
 
 // s
-function getDataAjax({ url, action, table = 1 }) {
+function getDataAjax({ url, action, current_page = 0, next_page = 1, items = 10, table = 1 }) {
   //Khoi tao doi tuong
   var xhttp = new XMLHttpRequest();
   //cau hinh request
@@ -55,10 +80,17 @@ function getDataAjax({ url, action, table = 1 }) {
     // console.log(this.readyState)
     //Kiem tra neu nhu da gui request thanh cong
     if (this.status === 200 && this.readyState === XMLHttpRequest.DONE) {
-      var response = this.response;
+      // swap(current_page, next_page);
+      if (current_page > next_page) {
+        next_page = [current_page, current_page = next_page][0];
+      }
+      current_page = (current_page == next_page ? current_page - 1 : current_page);
+      let response = this.response;
+      let total = response.length;
 
+      bindPagination(total);
       if (table = USER_TABLE) {
-        userTable(response);
+        userTable(response.slice(current_page * items, next_page * items));
       }
     }
   }
@@ -71,6 +103,7 @@ function dataAjax({ url, action, data }) {
   //Khoi tao doi tuong
   var xhttp = new XMLHttpRequest();
   var mss = '';
+  
   //cau hinh request
   xhttp.open(action, url, true);
   xhttp.responseType = 'json';
@@ -85,11 +118,14 @@ function dataAjax({ url, action, data }) {
         const { password, username } = user;
         if (data.password == password && data.username == username) {
           mss = 'Dang nhap thanh cong';
+          bindMessage(NOC_SUCC, mss, SUCCESS);
+          // break;
         } else {
           mss = 'Dang nhap that bai';
+          bindMessage(NOC_DANG, mss, DANGER);
         }
 
-        console.log(mss);
+        // console.log(mss);
       });
     }
   }
@@ -107,15 +143,8 @@ function showError(element, error) {
   element.nextElementSibling.innerText = error;
 }
 
-// function checkNameRegx(name) {
-  
-// }
-
-// function checkError(input, error) {
-
-//   if (!checkRegx(input.value,  )) {
-//     showError(input, "Invalid Username");
-//   } else {
-//     input.classList.remove('is-invalid');
-//   }
-// }
+function removeActive(elements) {
+  elements.forEach((element) => {
+    element.classList.remove('active');
+  });
+}

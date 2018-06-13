@@ -85,9 +85,12 @@
           </tr>
         </thead>
         <tbody>
-          
         </tbody>
       </table>
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+        </ul>
+      </nav>
     </div>
   </main>
   <!-- Jquery -->
@@ -99,19 +102,30 @@
   <!-- My JS -->
   <script src="../js/myscript.js"></script>
   <script>
-  $(document).ready(function() {
-    var date_input = $('.datetimepicker'); //our date input has the name "date"
-    date_input.datepicker({
-      format: 'mm/dd/yyyy',
-      todayHighlight: true,
-      autoclose: true,
-    });
-
     getDataAjax({
       url: 'https://training.gemvietnam.com/dummy-api/users.json',
-      action: 'get'
+      action: 'get',
     });
-  });
+
+    let pagi = document.querySelector('.pagination');
+    let pages = document.querySelectorAll('.page-item');
+    pagi.onclick = function(event) {
+      let item = (function(event) {
+        e = event || window.event;
+        return e.target || e.srcElement;
+      })(event);
+
+      // removeActive(pages);
+      item.parentElement.classList.add('active');
+
+      getDataAjax({
+        url: 'https://training.gemvietnam.com/dummy-api/users.json',
+        action: 'get',
+        current_page: item.innerText - 1,
+        next_page: item.innerText
+      });
+    }
+  
   </script>
 </body>
 
