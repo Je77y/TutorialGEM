@@ -102,30 +102,55 @@
   <!-- My JS -->
   <script src="../js/myscript.js"></script>
   <script>
+  getDataAjax({
+    url: 'https://training.gemvietnam.com/dummy-api/users.json',
+    action: 'get'
+  });
+
+
+  let pagi = document.querySelector('.pagination');
+  let pages = document.querySelectorAll('.page-item');
+  pagi.onclick = function(event) {
+    // Lay su kien cua li khi click vao
+    let item = (function(event) {
+      e = event || window.event;
+      return e.target || e.srcElement;
+    })(event);
+
+    // Click
+    let parentItem = item.parentElement;
+    // Active
+    let current_page = document.querySelector('.page-item.active');
+
+    // console.log(current_page);
+    let cur = current_page.children[0].innerText;
+    let nx = item.innerText;
+
+    // Xoa tat ca cac class Active trong class page-item
+    removeActive(pages);
+
+    // 
+    if (item.classList.contains("next")) {
+      current_page.nextElementSibling.classList.add('active');
+      nx = parseInt(cur) + 1;
+    } else if (item.classList.contains("prev")) {
+      current_page.previousElementSibling.classList.add('active');
+      cur = cur - 1;
+      nx = cur - 1;
+    } else {
+      parentItem.classList.add('active');
+      nx = item.innerText;
+      cur = nx - 1;
+    }
+
+
     getDataAjax({
       url: 'https://training.gemvietnam.com/dummy-api/users.json',
       action: 'get',
+      current_page: cur,
+      next_page: nx
     });
-
-    let pagi = document.querySelector('.pagination');
-    let pages = document.querySelectorAll('.page-item');
-    pagi.onclick = function(event) {
-      let item = (function(event) {
-        e = event || window.event;
-        return e.target || e.srcElement;
-      })(event);
-
-      // removeActive(pages);
-      item.parentElement.classList.add('active');
-
-      getDataAjax({
-        url: 'https://training.gemvietnam.com/dummy-api/users.json',
-        action: 'get',
-        current_page: item.innerText - 1,
-        next_page: item.innerText
-      });
-    }
-  
+  }
   </script>
 </body>
 
